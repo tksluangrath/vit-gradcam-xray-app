@@ -1,9 +1,3 @@
----
-noteId: "d5d6fce0232311f1884e0917dd4ae7f4"
-tags: []
-
----
-
 # Docker Deployment Guide
 
 How to run the Medical Image Classification App with Docker and docker-compose on any machine.

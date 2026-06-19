@@ -1,9 +1,3 @@
----
-noteId: "dab253e0232811f1884e0917dd4ae7f4"
-tags: []
-
----
-
 # Debug Report — Sprint 1.1 Custom Image Upload
 
 ## Summary

@@ -1,9 +1,3 @@
----
-noteId: "13e18700232711f1884e0917dd4ae7f4"
-tags: []
-
----
-
 # Feature 1.1 — Custom Image Upload
 
 ## Feature Overview

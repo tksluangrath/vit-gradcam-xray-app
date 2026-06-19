@@ -1,9 +1,3 @@
----
-noteId: "qa_report_sprint_1_1"
-tags: []
-
----
-
 # QA Report — Sprint 1.1 Custom Image Upload
 
 ## Summary

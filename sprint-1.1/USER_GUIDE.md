@@ -1,9 +1,3 @@
----
-noteId: "19c2ce90232711f1884e0917dd4ae7f4"
-tags: []
-
----
-
 # Custom Image Upload — User Guide
 
 How to upload and classify your own chest X-ray images in the Medical Image Classification App.

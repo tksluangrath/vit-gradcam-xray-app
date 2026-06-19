@@ -1,9 +1,3 @@
----
-noteId: "cc04fcc01b1811f1884e0917dd4ae7f4"
-tags: []
-
----
-
 # Medical Image Classification App
 
 A portfolio-grade web app for chest X-ray pneumonia detection using a Vision Transformer (ViT) model, Grad-CAM visualization, and the HuggingFace `chest-xray-pneumonia` dataset.

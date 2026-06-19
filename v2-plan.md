@@ -1,9 +1,3 @@
----
-noteId: "7f834ef0232511f1884e0917dd4ae7f4"
-tags: []
-
----
-
 # Medical Image Classification App — v2.0 PRD
 
 > Synthesized from five parallel agent reviews: codebase audit (Explore), feature planning (Plan), UI/UX design, performance engineering, and QA strategy.

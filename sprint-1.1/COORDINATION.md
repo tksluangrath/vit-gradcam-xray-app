@@ -1,9 +1,3 @@
----
-noteId: "5a966b20232711f1884e0917dd4ae7f4"
-tags: []
-
----
-
 # Sprint 1.1 Coordination Document — Custom Image Upload
 
 **Status:** Implementation in progress
