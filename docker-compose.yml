@@ -1,0 +1,39 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - hf_cache:/app/.cache/huggingface
+      - gallery_cache:/app/cache/gallery
+    environment:
+      - MODEL_ID=nickmuchi/vit-finetuned-chest-xray-pneumonia
+      - DATASET_NAME=hf-vision/chest-xray-pneumonia
+      - GALLERY_CACHE_DIR=/app/cache/gallery
+      - API_PORT=8000
+      - HF_HOME=/app/.cache/huggingface
+      # Pass host HuggingFace token into container; gracefully omitted if not set
+      - HF_TOKEN=${HF_TOKEN:-}
+      - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN:-}
+      # Include docker-internal frontend hostname so CORS preflight passes
+      - ALLOWED_ORIGINS=["http://frontend:5173","http://localhost:5173","http://127.0.0.1:5173"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 300s   # model (~330MB) + dataset can take 4-5 min on a cold machine
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      - VITE_BACKEND_URL=http://backend:8000
+
+volumes:
+  hf_cache:
+  gallery_cache:
